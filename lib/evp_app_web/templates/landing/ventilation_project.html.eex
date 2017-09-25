@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ethan Crawford">
+    <!--
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#9f00a7">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    -->
+
+    <title>Проект Вентиляции | ЭнергоВентПроект</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/ventilation-project.css") %>">
+  </head>
+
+  <body>
+    <div class="app-container">
+      <div class="app-home">
+        <header class="app-home__header">
+          <div class="company">
+            <span class="company__type">Аритектурное бюро</span>
+            <span class="company__name">ЭнергоВентПроект</span>
+          </div>
+          <div class="call">
+            <span class="call__phone-number">+7 (495) 997-38-78</span>
+            <span class="call__time">9:30 утра - 5:30 вечера</span>
+            <span class="call__days">пн - пт</span>
+          </div>
+        </header>
+      </div>
+
+
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+    </div> <!-- /app-container -->
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

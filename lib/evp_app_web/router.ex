@@ -17,6 +17,7 @@ defmodule EvpAppWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/ventilation-project", LandingController, :ventilation_project
   end
 
   # Other scopes may use custom stacks.
